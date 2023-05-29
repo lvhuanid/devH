@@ -165,3 +165,6 @@ contrast    disregard
 ## The Slice Type
 straightforward     variety     graphical user interface (GUI)
 #### use pwd get path
+demonstrate     rect    rectangle       signature       chose
+struct  impl    enumerations    variants    concise idiom   available   subset  pattern matching
+### if let
