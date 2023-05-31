@@ -168,3 +168,138 @@ straightforward     variety     graphical user interface (GUI)
 demonstrate     rect    rectangle       signature       chose
 struct  impl    enumerations    variants    concise idiom   available   subset  pattern matching
 ### if let
+crate
+
+### componentWillMount()
+after onload,the page component is triggered before rendering to Taro's virtual DOM.
+### componentDidMount()
+triggered after the page component is renderd to taro's virtual Dom
+
+obtained    manipulate
+```js
+export default class Test extends React.Component {
+    el = createRef()
+
+    componentDidMount () {
+        console.log(this.el.current)
+    }
+
+    render () {
+        return (
+            <View id="only" ref={this.el} />
+        )
+    }
+}
+```
+to get the real mini program rendering layer node, you need to call the API used to get the DOM in the mini program during the onReady lifecycle.
+```
+onReady() {
+    Taro.createSelectorQuery().select("#only")
+        .boundingClientRect()
+        .exec(res => console.log(res))
+    }
+```
+### entry component
+every taro application needs an entry component to register the appliction. the default entry file is app.js in the directory.
+
+in the entry component we can set the global state or access the lifecycle of the mini program entry instance.
+
+```jsx
+const store = configStore()
+class App extends Component{
+    componentDidMount(){}
+    onLaunch(){}
+    componentDidShow(){}
+    componentDidHide(){}
+    render(){
+        return (
+            <Provider store={store}>
+                {this.props.children}
+            </Provider>
+        )
+    }
+}
+```
+
+```jsx
+const store = configStore()
+function App (props) {
+    // all react hooks can be used
+    useEffect(() => {})
+    // onShow
+    useDidShow(() => {})
+    // onHide
+    useDidHide(() => {})
+    return (
+        <Provider store={store}>
+            {props.children}
+        </Provider>
+    )
+}
+```
+corressponding      rogram
+
+### page components
+```
+// onPullDownRefresh, except for componentDidShow/componentDidHide
+// all page lifecycle function names correspond to mini program
+onPullDownRefresh(){}
+// Taro implements custom React Hooks for all mini program page lifecycles to support
+usePullDownRefresh(() => {})
+```
+onReachBottom(): listen to the user pull-up bottoming event.
+
+synchronization
+
+onPageScroll(Object):listening to user swipe page events
+
+onAddToFavorites(Object):listen to the user's click on the "Favorites"button int the upper-right corner of the menu and customize the contents of the favorites.
+
+onShareAppMessage(Object):listen to the user's behavior when they click on the forward button (Button component openType='share') or the "Forward" button int the top-right menu,and customize the forwarding content.
+
+Attention:
+- when onShareAppMessage is not triggered,please set enableShareAppMessage:true in the page config
+- only if this event handler is defined,the "Forward"button will be displayed in the upper right menu
+
+onResize(Object):triggered when the mini program screen is rotated
+
+corresponding   re-rendered     foreground
+```
+setState(prevState => {
+// 也可以使用 Object.assign
+return {...prevState, ...updatedValues};
+});
+```
+### lazy initial state
+```
+const [state, setState] = useState(() => {
+  const initialState = someExpensiveComputation(props);
+  return initialState;
+});
+```
+```
+useEffect(didUpdate);
+```
+```
+useEffect(() => {
+  const subscription = props.source.subscribe();
+  return () => {
+    // clear effect
+    subscription.unsubscribe();
+  };
+});
+```
+to avoid memory leaks, the cleanup function will be executed before the component is unmounted
+### the execution time of effect
+it's different from componentDidMount and componentDidUpdate, taro will execute the effect callback function at the next macrotask after the completion of setData,and the function passed to useEffect will be called delayed. this makes it suitable for a lot of common side effects scenarios, such as setting up subscriptions and event handing, so ti should't to execute render and update in functions.
+
+scenarios   subscription    overkill    scenarios   recreated       repeatedly      approach    alternative     seamless    elivering excellent     optimizing      insufficiency   threads     suffixed
+
+- floating-point
+- arrays enclosed in square brackets
+- objects enclosed in curly brackets
+- null
+
+html describes the structure of the page,css determines the appearance of the page,js defines the interaction between the page and the user.
+
+wxml is the equivalent of html
