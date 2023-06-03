@@ -303,3 +303,185 @@ scenarios   subscription    overkill    scenarios   recreated       repeatedly  
 html describes the structure of the page,css determines the appearance of the page,js defines the interaction between the page and the user.
 
 wxml is the equivalent of html
+
+calendards and pop-ups  scenarios
+we also provide packaged component capabilities like map,video and audio.
+we generally manipulate DOM(the tree generated from the description of HTML)
+records     conducive   applies     shown as below      scenarios       describe
+    incorporates    convert the pixel   pixel ratios    floating-point operations   obtaining
+```
+<button bindtap="clickMe"> click me </button>
+Page({ 
+    clickMe: function() {
+        this.setData({msg: "hello "})
+    }
+})
+```
+- Webview ==> native
+- JsCore ==> native
+- native =https request/ web socket=> service
+
+deliver     threads
+
+when the mini program is launched,the onLaunch callback of the app instance defined in app.js is executed
+
+### export 
+```js
+Object.defineProperty(exports, "clearCache", {
+  enumerable: true,
+  get: function get() {
+    return _useRequest.clearCache;
+  }
+})
+```
+- "object" is the object on which to define or modify the property.
+- "property" is the name of the property to be defined or modified.
+- "descriptor" is an object that contains the attributes of the property, such as value, writable, enumerable, and configurable.
+
+object-oriented     latitude and longitude
+```
+<map bindmarkertap="" longitude="" latitude="" > </map>
+```
+geographical location
+```
+wx.getLocation({
+  type: 'wgs84',
+  success: (res) => {
+    var latitude = res.latitude // Latitude
+    var longitude = res.longitude // Longitude
+  }
+})
+wx.scanCode({
+  success: (res) => {
+    console.log(res)
+  }
+})
+```
+collaboration   labor   involved    collaboration       synchronization
+```
+var _data = {
+    name:"weixin"
+}
+// register a page.
+Page({
+    data: _data,
+    changeName: function(e) {
+        //sent data change to view
+        this.setData({
+            name:"00"
+        })
+    }
+})
+
+<!-- This is our View -->
+<view> Hello {{name}}! </view>
+<button bindtap="changeName"> Click me! </button>
+```
+scene   obtained
+
+1. Sunday
+2. Monday
+3. Tuesday
+4. Wednesday
+5. Thursday
+6. Friday
+7. Saturday
+
+
+1. January
+2. February
+3. March
+4. April
+5. May
+6. June
+7. July
+8. August
+9. September
+10. October
+11. November
+12. December
+
+2517
+```js
+var maximumTastiness = function(price, k) {
+    price.sort((a,b) => a-b);
+    let left = 0, right = price[price.length - 1] - price[0];
+    while (left < right) {
+        const mid = Math.floor((left + right + 1) / 2);
+        if (check(price, k, mid)) {
+            left = mid:
+        } else {
+            right = mid - 1;
+        }
+    }
+    return left;
+}
+
+const check = (price, k, tastiness) => {
+    let prev = -Number.MAX_VALUE / 2;
+    let cnt = 0;
+    for (const p of price) {
+        if (p - prev >= tastiness) {
+            cnt++;
+            prev = p;
+        }
+    }
+    return cnt >= k;
+};
+```
+respectively    obtain   modularization
+```
+//app.js
+App({
+  onLaunch (options) {
+    // Do something initial when launch.
+  },
+  onShow (options) {
+    // Do something when show.
+  },
+  onHide () {
+    // Do something when hide.
+  },
+  onError (msg) {
+    console.log(msg)
+  },
+  globalData: 'I am global data'
+})
+
+// xxx.js
+const appInstance = getApp()
+console.log(appInstance.globalData) // I am global data
+```
+existing pages via stacks       reacts as follows
+- initialization    the new page is pushed onto the stack
+- opening a new     the new page is pushed onto the stack
+- page redirection  the current page is popped out of the stack, and the new page is pushed onto the stack.
+- page return       pages are successively popped out of the stack until the destination return page is displayed
+- the switching     all the pages are popped out of the stack, and only the new tabpage is retained
+- reloading         all the pages are popped out of the stack, and only the new page is retained.
+
+developers can obtain the current page stack by using the getCurrentPages() function.
+
+```
+<navigator 
+    open-type="navigateTo"
+    "redirectTo"
+    "navigateBack"
+    "switchTab"
+    "reLaunch"
+/>
+```
+tips:
+- navigateTo and redirectTo can be used to open non-tabBar pages only.
+- switchTab can be used to open tabBar pages only.
+- reLaunch canbe use to open any pages.
+- the tabBar on the buttom of a page is determined by the page. in other words, tabBar is displayed on the bottom of all pages defined as tabBar.
+- parameters used to call page routing can be obtained via onLoad in the destination page.
+
+ecology     cater   dimension unit
+### generic data types
+
+```
+fn largest<T>(list: &[T]) -> &T {
+```
+trait   comparisons
