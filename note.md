@@ -485,3 +485,56 @@ ecology     cater   dimension unit
 fn largest<T>(list: &[T]) -> &T {
 ```
 trait   comparisons
+### idea
+https://3.jetbra.in/
+
+capturing   declaration
+831模拟
+```js
+const country = ["", "+*-", "+**-", "+***-"];
+
+var maskPII = function(s) {
+    const at = s.indexOf("@");
+    if (at > 0) {
+        s = s.toLowerCase();
+        return (s[0] + "*****" + s.substring(at -1)).toLowerCase();
+    }
+    let sb = "";
+    for (let i = 0; i < s.length; i++) {
+        const c = s.charAt(i);
+        if ('0' <= c && c <= '9') {
+            sb += c;
+        }
+    }
+    s = sb.toString();
+    return counry[s.length - 10] + "***-***-" + s.subtring(s.length - 4);
+}
+```
+###  powershell
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+
+postcss
+
+2460直接模拟
+```js
+var applyOperations = function(nums) {
+    let n = nums.length;
+    let j = 0;
+    for (let i = 0; i < n; i++) {
+        if (i + 1 < n && nums[i] == nums[i + 1] ) {
+            nums[i] *= 2;
+            nums[i+1] = 0;
+        }
+        if (nums[i] != 0) {
+            [nums[i], nums[j]] = [nums[j], nums[i]];
+            j++;
+        }
+    }
+    return nums;
+};
+```
+about unionID mechanism
+
+unionID can be used to distinguish user uniqueness      asymptotic      encounter       further
+
