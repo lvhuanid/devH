@@ -536,5 +536,108 @@ var applyOperations = function(nums) {
 ```
 about unionID mechanism
 
-unionID can be used to distinguish user uniqueness      asymptotic      encounter       further
+unionID can be used to distinguish user uniqueness      asymptotic      encounter       further     1036    1069    non-1069    app-parameter       facilitate      open-type
+coupons(including general cards)
+standardized    idiosyncratic   CommonJS and AMD.ES     iife-style scripts
+```
+# compile to a <script> containing a self-executing function ('iife')
+```
+generics
+#### a major part of software engineering is building components that not only have well-defined and consistent APIs,but are also reusable  
+```
+    function identity<Type>(arg: Type): Type {
+        return arg;
+    }
+```
+e.g. 例如   i.e.即，也  
+- pass all of the arguments, including the type argument, to the function
+```
+let ouput = identity<string>("mystring");
+    let output: string
+```
+- use type argument inference--that is, we want the compiler to set the value of Type for us automatically bassed on the type of the argument we pass in:
+```
+let ouput = identity("mystring");
+    let output : string
+```
+```
+function loggingIdentity<Type>(arg: Type[]): Type[] {
+  console.log(arg.length);
+  return arg;
+}
 
+function loggingIdentity<Type>(arg: Array<Type>): Array<Type> {
+  console.log(arg.length); // Array has a .length, so no more error
+  return arg;
+}
+```
+vulnerabilities     verification    etc. 等等       parallel    briefly     serially
+```
+interface GenericIdentityFn<Tyoe> {
+    (arg: Type): Type;
+}
+
+function identity<Type>(arg: Type): Type {
+    return arg;
+}
+
+let myIdentity: GenericIdentityFn<number> = identity;
+```
+corrsponding    aspects
+```
+class GenericNumber<NumType> {
+    zeroValue: NumType;
+    add: (x:NumType, y: NumType) => NumType;
+}
+let myGenericNumber = new GenericNumber<number>();
+myGenericNumber.zeroValue = 0;
+myGenericNumber.add = function (x, y) {
+    return x + y;
+}
+console.log(stringNumberic.add(stringNumeric.zeroValue, "test"));
+```
+accidentally grabbing   deemed optional   succinct
+
+### creating types from types
+- generics -types which take parameters
+- keyof type operator -using the keyof operator to create new types
+- typeof type operator -using the typeof operator to create new types
+- indexed access types -using type['a'] syntax to access a subset of a type
+- conditional types -types which act like if statements in the type system
+- mapped types -creating types by mapping each property in an existing type
+- template literal types -mapped types which change properties via template literal strings
+
+the keyof operator takes an object type and produces a string or numeric literal union of  its keys
+```
+type Point = {x: number; y: number};
+type P = keyof Point;
+```
+if the type has a string or number index signature, keyof will return those types instead
+```
+type Arrayish = {[n: number]: unknown};
+type A = keyof Arrayish;
+// type A = number
+
+type Mapish = {[k: string]: boolean};
+type M = keyof Mapish;
+// type M = string | number
+```
+coerced
+```
+let s = "ssss";
+let n: typeof s;
+// let n: string
+
+type Predicate = (x: unknown) => boolean;
+type K = ReturnType<Predicate>
+// type K = boolean
+
+function f() {
+    return {x: 10, y: 3};
+}
+type P = ReturnType<typeof f>;
+// type P = {
+    x: number;
+    y: number;
+}
+```
