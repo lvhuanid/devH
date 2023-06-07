@@ -641,3 +641,5 @@ type P = ReturnType<typeof f>;
     y: number;
 }
 ```
+subtly  boilerplate
+https://www.typescriptlang.org/docs/handbook/2/objects.html
