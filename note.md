@@ -643,3 +643,97 @@ type P = ReturnType<typeof f>;
 ```
 subtly  boilerplate
 https://www.typescriptlang.org/docs/handbook/2/objects.html
+```
+class Point {
+    x: number;
+    y: number;
+}
+const pt = new Point();
+pt.x = 0;
+pt.y = 0;
+```
+strictPropertyInitialization
+```
+class GoodGreeter {
+    name: sting;
+
+    constructor() {
+        this.name = "hhhhh";
+    }
+}
+```
+definite assignment assertion operator !:
+```
+class OKGreeter {
+    // Not initialized, but no error
+    name!: string;
+}
+```
+readonly
+Fields may be prefixed with the readonly modifier. this prevents assignments to the field outside of the constructor.
+``` 
+class Greeter {
+    readonly name: string = "wwww";
+
+    constructor(otherName?: string) {
+        if (
+```
+super()
+accessors
+- if get exists but no set, the property is automatically readonly
+- if the type of the setter parameter is not specified, it is inferred from the return type of the getter
+- Getters and setters must have the same Member Visibility.
+
+index Signatures
+```
+ [s: string]: boolean | ((s: string) => boolean);
+```
+class heritage      implement multiple interfaces       cautions
+- implements clauses
+- extends clauses
+
+Member Visibility
+- public
+- protected
+- private
+
+fields
+static members
+ `#count` is a private instance field that was introduced in TypeScript 3.8
+instantiated
+```ts
+function myPromise(): Promise<string> {
+    return new Promise((resolve, reject) => {
+```
+generic classes
+```
+class Box<Type> {
+  contents: Type;
+  constructor(value: Type) {
+    this.contents = value;
+  }
+}
+ 
+const b = new Box("hello!");
+// const b: Box<string>
+```
+static members cannot reference class type parameters.  
+types are always fully erased
+The static members of a generic class can never refer to the class's type parameters.
+
+peculiar
+this is indeed unusual
+### arrow functions
+if you have a function that will often be called in a way that loses its this context, it can make sense to use an arrow function property instead of a method definition:
+```
+class MyClass {
+    name = "mmmm";
+    getName = () => {
+        return this.name;
+    };
+}
+const c = new MyClass();
+const g = c.getName;
+...
+```
+
