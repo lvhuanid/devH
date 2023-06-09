@@ -736,4 +736,19 @@ const c = new MyClass();
 const g = c.getName;
 ...
 ```
+terminology     throughout      hierarchical
+url segment: part of the url path delimited by slashes
+url path: part of the url that comes after the domain(composed of segments)
+
+app router built on react server components 
+alongside   incremental adoption    priority    nested routes       colocation      publically addressable      optimization
+
+unlike the pages dierectory which uses client-side routing, the app router uses server-centric routing to align with server components and data fetching on the server
+
+resembling      payload in an in-memory client-side cache       invalidation    certain cases       previously
+partial rendering       sibling routes      preserved       cause       transferred     patterns    intercepting    represents      accessible
+
+a layout is ui that is shared between multiple [ages.On navigation,layouts preserve state, remian insteractive, and do not re-render
+
+no time like the present
 
