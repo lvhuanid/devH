@@ -752,3 +752,82 @@ a layout is ui that is shared between multiple [ages.On navigation,layouts prese
 
 no time like the present
 
+#### common syntax
+private access is just to this class, protected allows to subclass. Only used for type chcking, publick is the default. 
+
+
+exclamation mark (!)
+convetions      automatically dedupe the requests without affecting performance
+built-in SEO support        metadata        interpolation       determine   implicitly  converted       parentheses
+#### swift
+write the value in parentheses, and write a backslash(\) before the parentheses
+
+- experiment
+use \() to include a floating-point calculation in a string and to include someone's name in a greeting.
+
+
+use three double quotation marks (""") for strings that take up multiple lines
+
+
+create arrays and dictionaries using brakets([]), and access their elements by writing the index or key in brackets
+```
+var fruits = ["stawberries", "limes", "tangerines"]
+fruits[1] = "grapes"
+
+var occupations = [
+    "malcolm": "captain",
+    "kayless": "mechanic"
+]
+occupations["jayne"] = "public relations"
+
+let emptyArray:[String] = []
+let emptyDictionary:[String: Float] = [:]
+```
+#### use for-in, while, and repeat-while to make loops
+
+You can use if and let together to work with values that might be missing. These values are represented as optionals. An optional value either contains a value or contains nil to indicate that a value is missing. Write a question mark (?) after the type of a value to mark the value as optional.
+```
+var optionalString: String? = "Hello"
+print(optionalString == nil)
+// Prints "false"
+
+var optionalName: String? = "John Appleseed"
+var greeting = "Hello!"
+if let name = optionalName {
+    greeting = "Hello, \(name)"
+}   
+```
+Another way to handle optional values is to provide a default value using the ?? operator. If the optional value is missing, the default value is used instead.
+```
+let nickname: String? = nil
+let fullName: String = "John Appleseed"
+let informalGreeting = "Hi \(nickname ?? fullName)"
+
+```
+unwrap      pattern
+```
+var n = 2
+while n < 100 {
+    n *= 2
+}
+print(n)
+// Prints "128"
+
+
+var m = 2
+repeat {
+    m *= 2
+} while m < 100
+print(m)
+// Prints "128"
+```
+Use ..< to make a range that omits its upper value, and use ... to make a range that includes both values
+```
+var total = 0
+for i in 0..<4 {
+    total += i
+}
+print(total)
+// Prints "6"
+```
+partitioning    affecting   enabling
