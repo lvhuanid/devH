@@ -852,3 +852,90 @@ https://github.com/gitbito/CLI
 elapsedTime
 
 don't write sparate overloads that differ only on callback arity
+
+
+experiment      underscore _    arrow ->  integer arrow  string arrow
+
+functions are actually a special case of closures: blocks of code that can be called later. the code in a closure has access to things like variables and functions that were available in the scope where the closure was created, even if the closure is in a different scope when it's executed -- you saw an example of this already with nested functions. you can write a closure without a name by surrounding code with braces({}). use in to separate the arguments and return type from the body
+```
+numbers.map({number: Int) -> Int in 
+    let result = 3 * number
+    return result
+}）
+```
+
+Experiment
+
+Rewrite the closure to return zero for all odd numbers.
+
+You have several options for writing closures more concisely. When a closure’s type is already known, such as the callback for a delegate, you can omit the type of its parameters, its return type, or both. Single statement closures implicitly return the value of their only statement.
+```
+let mappedNumbers = numbers.map({ number in 3 * number })
+pri费用报销_form_23_5nt(mappedNumbers)
+// Prints "[60, 57, 21, 36]"
+```
+
+You can refer to parameters by number instead of by name — this approach is especially useful in very short closures. A closure passed as the last argument to a function can appear immediately after the parentheses. When a closure is the only argument to a function, you can omit the parentheses entirely.
+```
+let sortedNumbers = numbers.sorted { $0 > $1 }
+print(sortedNumbers)
+// Prints "[20, 19, 12, 7]"
+```
+distinguish     semicolons      assign to   initial     separated       desired     parentheses     backslash(\) 
+take up multiple lines      brackets([])    braces{}   three double quotation marks (""")    question mark (?)
+
+concisely   delegate
+use dot syntax to access the properties  and methods of the instance
+
+hierarchy
+
+get angry   get upset   get annoyed     get irritated       get worried  he's getting on = he's getting old
+get stuck   get ready   get interesting
+i get the impression = it seems to me       to get vaccinated = to receive a vaccine
+extremely interesting       incredibly interesting      tremendously useful     particularly useful     dead good
+
+
+#### JSON
+JSON.stringify(p, null, 4)
+
+
+1262
+```
+var maxSumDivThree = function(nums) {
+    const v =[[], [], []];
+    for (const num of nums) {
+        v[num % 3].push(num);
+    }
+    v[1].sort((a,b) => b -a);
+    v[2].sort((a,b) => b -a);
+
+    let ans = 0;
+    const lb = v[1].length;
+    const lc = v[2].length;
+    for (let cntb = lb - 2; cntb <= lb; ++cntb) {
+        if (cntb >= 0) {
+            for (let cntc = lc - 2; cntc <= lc; ++cntc) {
+                if (cntc >=0 && (cntb -cntc) % 3 === 0) {
+                    ans = Math.max(ans, getSum(v[1], 0, cntb)
+                }
+            }
+        }
+    }
+    return ans + getSum(v[0], 0, v[0].length);
+};
+
+const getSum = (list, start, end) => {
+    let sum = 0;
+    for (let i = start; i < end; ++i) {
+        sum += list[i];
+    }
+    return sum;
+}
+
+### redis
+```
+json.set nms:connection:192.168.1.211:830:uup1 $ "{\"type\":\"eos\",\"ne_id\":\"192.168.1.211:830\",\"data\":{\"$\":{\"xmlns\":\"urn:ietf:params:xml:ns:netconf:base:1.0\",\"xmlns:nc\":\"urn:ietf:params:xml:ns:netconf:base:1.0\",\"message-id\":\"e6443db0-06a0-11ee-a133-eb162578215f\"},\"connection\":{\"name\":\"connection=ETH4\",\"label\":\"uup1\",\"state-pac\":{\"operational-state\":\"up\",\"admin-state\":\"enabled\"},\"layer-protocol-name\":\"ETH\",\"requested-capacity\":{\"cir\":\"1000\",\"pir\":\"1000\",\"cbs\":\"33546\",\"pbs\":\"33546\"},\"egress-capacity\":{\"cir\":\"1000\",\"pir\":\"1000\",\"cbs\":\"33546\",\"pbs\":\"33546\"},\"ctp\":[\"PTP=/shelf=1/slot=9/port=2/CTP=65535\",\"FTP=/shelf=1/slot=9/port=201/CTP=65535\"],\"service-type\":\"EPL\",\"pg-id\":\"513\"},\"create-component\":{\"ctp-name\":\"PTP=/shelf=1/slot=10/port=102/CTP=5001\",\"ftp-name\":[\"FTP=/shelf=1/slot=10/port=503\",\"FTP=/shelf=1/slot=9/port=201\"],\"vc-connection-name\":\"connection=SDH5\"},\"ports-with-role\":{\"eth-ptp-ctp\":\"PTP=/shelf=1/slot=9/port=2/CTP=65535\",\"eth-ftp-ctp\":\"FTP=/shelf=1/slot=9/port=201/CTP=65535\",\"eth-ftp\":\"FTP=/shelf=1/slot=9/port=201\",\"sdh-ftp\":\"FTP=/shelf=1/slot=10/port=503\",\"ul-odu-ctp\":\"PTP=/shelf=1/slot=10/port=102/CTP=5001\",\"vc-cascade\":{\"eth-ftp-vc-ctp\":\"FTP=/shelf=1/slot=9/port=201/CTP=20001\",\"sdh-ftp-ctp\":\"FTP=/shelf=1/slot=10/port=503/CTP=20001\"}}},\"name\":\"uup1\",\"eth-uni\":{\"uni-ptp-name\":\"PTP=/shelf=1/slot=9/port=2\"},\"primary-nni\":{\"nni-ptp-name\":\"PTP=/shelf=1/slot=10/port=102\"}}"
+```
+```
+json.get nms:connection:192.168.1.211:830:uup1
+```
