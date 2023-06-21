@@ -934,7 +934,7 @@ const getSum = (list, start, end) => {
 
 ### redis
 ```
-json.set nms:connection:192.168.1.211:830:uup1 $ "{\"type\":\"eos\",\"ne_id\":\"192.168.1.211:830\",\"data\":{\"$\":{\"xmlns\":\"urn:ietf:params:xml:ns:netconf:base:1.0\",\"xmlns:nc\":\"urn:ietf:params:xml:ns:netconf:base:1.0\",\"message-id\":\"e6443db0-06a0-11ee-a133-eb162578215f\"},\"connection\":{\"name\":\"connection=ETH4\",\"label\":\"uup1\",\"state-pac\":{\"operational-state\":\"up\",\"admin-state\":\"enabled\"},\"layer-protocol-name\":\"ETH\",\"requested-capacity\":{\"cir\":\"1000\",\"pir\":\"1000\",\"cbs\":\"33546\",\"pbs\":\"33546\"},\"egress-capacity\":{\"cir\":\"1000\",\"pir\":\"1000\",\"cbs\":\"33546\",\"pbs\":\"33546\"},\"ctp\":[\"PTP=/shelf=1/slot=9/port=2/CTP=65535\",\"FTP=/shelf=1/slot=9/port=201/CTP=65535\"],\"service-type\":\"EPL\",\"pg-id\":\"513\"},\"create-component\":{\"ctp-name\":\"PTP=/shelf=1/slot=10/port=102/CTP=5001\",\"ftp-name\":[\"FTP=/shelf=1/slot=10/port=503\",\"FTP=/shelf=1/slot=9/port=201\"],\"vc-connection-name\":\"connection=SDH5\"},\"ports-with-role\":{\"eth-ptp-ctp\":\"PTP=/shelf=1/slot=9/port=2/CTP=65535\",\"eth-ftp-ctp\":\"FTP=/shelf=1/slot=9/port=201/CTP=65535\",\"eth-ftp\":\"FTP=/shelf=1/slot=9/port=201\",\"sdh-ftp\":\"FTP=/shelf=1/slot=10/port=503\",\"ul-odu-ctp\":\"PTP=/shelf=1/slot=10/port=102/CTP=5001\",\"vc-cascade\":{\"eth-ftp-vc-ctp\":\"FTP=/shelf=1/slot=9/port=201/CTP=20001\",\"sdh-ftp-ctp\":\"FTP=/shelf=1/slot=10/port=503/CTP=20001\"}}},\"name\":\"uup1\",\"eth-uni\":{\"uni-ptp-name\":\"PTP=/shelf=1/slot=9/port=2\"},\"primary-nni\":{\"nni-ptp-name\":\"PTP=/shelf=1/slot=10/port=102\"}}"
+json.set nms:connection:192.168.1.211:830:uup1 $ ""
 ```
 ```
 json.get nms:connection:192.168.1.211:830:uup1
