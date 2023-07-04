@@ -964,3 +964,53 @@ encapsulate
 costly prospects brochures generation lived statement finger marriages cone sample hotline neat nicely extraordinary franchise basically recognition exploited similar affecting pine likes fitting meadow pig claims freezer spider
 
 extranordinary      spoecify    pedometer
+
+#### set git proxy
+```
+git config --global -l
+git config --global http.proxy http://127.0.0.1:xxx
+
+ctrl + shift + U  webstorm lowercase => uppercase
+
+Computed properties are provided by classes, structures, and enumerations. 
+Stored properties are provided only by classes and structures.
+
+js ^ xor
+
+assume      mutating
+
+mutating methods can assign an entirely new instance to the implicit self property
+```
+stuct Point {
+    var x = 0.0, y = 0.0
+    mutating func moveBy(x deltaX: Double, y deltaY: Double) {
+        x += deltaX
+        y += deltaY
+    }
+}
+```
+unquaified      perspective     differentiates      upon    vehicle     winning
+celsius     fehrenheit     terms    term    corresponding way       infer       inferred based
+
+anonymous functions     encounter       mandarin and cantonese      constant
+
+formats canvas vendor formed stamp ignore torrent learn power accordance templates gibraltar enhancements abroad 
+attempted motivated mathematical admin animals legally juice prisoner satisfy graphs liable predicted tech demographic 
+argue
+
+narrow      
+- type assertions (as)    
+- literal types
+- literal inference
+
+
+generics
+```
+function identity<Type>(arg: Type): Type {
+    return arg;
+}
+let output = identity<string>("abc");
+
+
+```
+caveat
