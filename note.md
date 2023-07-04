@@ -969,6 +969,7 @@ extranordinary      spoecify    pedometer
 ```
 git config --global -l
 git config --global http.proxy http://127.0.0.1:xxx
+```
 
 ctrl + shift + U  webstorm lowercase => uppercase
 
