@@ -890,7 +890,7 @@ use dot syntax to access the properties  and methods of the instance
 hierarchy
 
 get angry   get upset   get annoyed     get irritated       get worried  he's getting on = he's getting old
-get stuck   get ready   get interesting
+get stuck   get ready   get interesting     
 i get the impression = it seems to me       to get vaccinated = to receive a vaccine
 extremely interesting       incredibly interesting      tremendously useful     particularly useful     dead good
 
@@ -1014,4 +1014,13 @@ let output = identity<string>("abc");
 
 
 ```
-caveat
+caveat      decimal digit       place => places     intuit      fingertips
+
+leetcode 2040
+
+set up      adjacent        boundary        interval    midpoint        optimize        mandatory
+pseudorandom    pseudo      provide => provition        flavour     flavor      fortunate       delegation      encapsulate
+
+poker indirect australia navigate inhibitors shore bracket bilateral panama arbitrary rats suspend responsible commissioner ignored sciences starring mortality freshman cancellation realty empirical deep razor meadow spotted bye
+
+vary    hashable
