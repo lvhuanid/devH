@@ -1023,4 +1023,39 @@ pseudorandom    pseudo      provide => provition        flavour     flavor      
 
 poker indirect australia navigate inhibitors shore bracket bilateral panama arbitrary rats suspend responsible commissioner ignored sciences starring mortality freshman cancellation realty empirical deep razor meadow spotted bye
 
-vary    hashable
+vary    hashable    atom atomic atomics     consistency     consistencies
+1. iOS:
+   - iOS apps have an app lifecycle that includes events such as `didFinishLaunchingWithOptions`, `applicationDidEnterBackground`, and `applicationWillTerminate`. These events allow you to handle app initialization, background transitions, and termination.
+   - View controllers in iOS have their own lifecycle, including methods like `viewDidLoad`, `viewWillAppear`, `viewDidAppear`, `viewWillDisappear`, and `viewDidDisappear`. These methods are called at different stages of the view controller's lifecycle, allowing you to manage the appearance, disappearance, and state changes of views.
+
+2. Android:
+   - Android apps have an app lifecycle that includes events like `onCreate`, `onStart`, `onResume`, `onPause`, `onStop`, and `onDestroy`. These events allow you to manage app initialization, visibility changes, and termination.
+   - Activities in Android have their own lifecycle, similar to iOS view controllers, with methods such as `onCreate`, `onStart`, `onResume`, `onPause`, `onStop`, and `onDestroy`. These methods are called at different stages of the activity's lifecycle, allowing you to manage the creation, visibility, and termination of activities.
+
+3. Mini Programs:
+   - Mini programs, such as WeChat Mini Programs or Alipay Mini Programs, have their own lifecycle specific to the platform and framework being used.
+   - Mini programs typically have an app lifecycle that includes events like `onLaunch`, `onShow`, and `onHide`. These events allow you to handle app initialization, foreground transitions, and background transitions.
+   - Pages or screens within a mini program may have their own lifecycle, including events like `onLoad`, `onShow`, `onHide`, and `onUnload`. These events allow you to manage the initialization, visibility changes, and unloading of pages.
+
+It's important to note that the specific lifecycle events and methods may vary depending on the platform, framework, and development environment being used. It's recommended to refer to the documentation and guidelines of the specific platform or framework you are working with for detailed information on the lifecycles and event handling.
+
+potential       considered      excess      boilerplate
+
+A generic parameter default follows the following rules:
+
+- A type parameter is deemed optional if it has a default.
+- Required type parameters must not follow optional type parameters.
+- Default types for a type parameter must satisfy the constraint for the type parameter, if it exists.
+- When specifying type arguments, you are only required to specify type arguments for the required type parameters. Unspecified type parameters will resolve to their default types.
+- If a default type is specified and inference cannot choose a candidate, the default type is inferred.
+- A class or interface declaration that merges with an existing class or interface declaration may introduce a default for an existing type parameter.
+- A class or interface declaration that merges with an existing class or interface declaration may introduce a new type parameter as long as it specifies a default.
+
+
+morph       FAQ (frequently asked questions)    perspective     prerequisite        deem        hypothetical    
+nongeneric      associatedtype      mutating    determines  escape => escaping  
+@autoclosure    @escaping
+
+double and float    bool and string     three primary collection types, array, Set, Dictionary      integers
+numeric literals
+semicolon   "
